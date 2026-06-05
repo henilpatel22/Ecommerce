@@ -1,0 +1,258 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>IronMan Toys Store</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+
+  <body class="bg-gray-950 text-white">
+    <!-- Loader -->
+    <div
+      id="loader"
+      class="fixed inset-0 bg-black flex flex-col justify-center items-center z-50"
+    >
+      <!-- Arc Reactor -->
+
+      <div class="relative w-40 h-40 flex items-center justify-center">
+        <div
+          class="w-16 h-16 rounded-full bg-cyan-300 animate-pulse shadow-[0_0_30px_#67e8f9,0_0_60px_#67e8f9,0_0_100px_#67e8f9]"
+        ></div>
+
+        <div
+          class="absolute w-28 h-28 border-4 border-cyan-300 rounded-full animate-spin"
+        ></div>
+
+        <div
+          class="absolute w-36 h-36 border-2 border-cyan-300 rounded-full animate-spin"
+        ></div>
+      </div>
+
+      <!-- Text -->
+
+      <h1 class="mt-8 text-yellow-400 text-3xl font-bold tracking-widest">
+        STARK INDUSTRIES
+      </h1>
+
+      <p class="text-gray-400 mt-2">Initializing J.A.R.V.I.S...</p>
+
+      <!-- Progress Bar -->
+
+      <div class="w-64 h-2 bg-gray-700 rounded-full mt-8 overflow-hidden">
+        <div id="progress" class="h-full bg-cyan-300 w-0"></div>
+      </div>
+    </div>
+    <!-- NAVBAR -->
+
+    <nav class="bg-red-700 shadow-lg">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="flex justify-between items-center py-4">
+          <h1 class="text-3xl font-bold text-yellow-400">⚡ IRONMAN TOYS</h1>
+
+          <ul class="hidden md:flex gap-8">
+            <li>
+              <a href="#" class="hover:text-yellow-400"> Home </a>
+            </li>
+
+            <li>
+              <a href="#" class="hover:text-yellow-400"> Shop </a>
+            </li>
+
+            <li>
+              <a href="#" class="hover:text-yellow-400"> Collections </a>
+            </li>
+
+            <li>
+              <a href="#" class="hover:text-yellow-400"> Contact </a>
+            </li>
+          </ul>
+
+          <button
+            class="bg-yellow-400 text-black px-5 py-2 rounded-lg font-bold hover:scale-105 transition"
+          >
+            🛒 Cart
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+
+    <section class="relative h-screen overflow-hidden">
+      <!-- Background Video -->
+      <video
+        autoplay
+        muted
+        loop
+        playsinline
+        class="absolute top-0 left-0 w-full h-full object-cover"
+      >
+        <source src="video.mp4" type="video/mp4" />
+      </video>
+
+      <!-- Dark Overlay -->
+      <div class="absolute inset-0 bg-black/70"></div>
+
+      <!-- Content -->
+      <div
+        class="relative z-10 flex flex-col justify-center items-center h-full text-center px-5"
+      >
+        <h1 class="text-6xl md:text-8xl font-extrabold text-red-600">
+          IRON MAN
+        </h1>
+
+        <h2 class="text-3xl md:text-5xl text-yellow-400 mt-4">
+          STARK INDUSTRIES STORE
+        </h2>
+
+        <p class="max-w-2xl mt-6 text-gray-200">
+          Explore premium Iron Man action figures, helmets, arc reactors and
+          collectibles.
+        </p>
+
+        <button
+          class="mt-8 bg-red-600 px-8 py-4 rounded-xl hover:bg-yellow-400 hover:text-black transition duration-300"
+        >
+          Shop Now
+        </button>
+      </div>
+    </section>
+
+    <!-- CATEGORIES -->
+
+    <section class="py-20 px-6">
+      <h2 class="text-4xl font-bold text-center text-yellow-400 mb-10">
+        Categories
+      </h2>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        <div
+          class="bg-gray-900 p-8 rounded-xl border border-red-600 text-center"
+        >
+          🦾
+
+          <h3 class="text-2xl mt-4">Action Figures</h3>
+        </div>
+
+        <div
+          class="bg-gray-900 p-8 rounded-xl border border-yellow-400 text-center"
+        >
+          ⚡
+
+          <h3 class="text-2xl mt-4">Arc Reactors</h3>
+        </div>
+
+        <div
+          class="bg-gray-900 p-8 rounded-xl border border-red-600 text-center"
+        >
+          🪖
+
+          <h3 class="text-2xl mt-4">Helmets</h3>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRODUCTS -->
+
+    <section class="py-20 bg-gray-900">
+      <h2 class="text-4xl text-center font-bold text-yellow-400 mb-12">
+        Featured Products
+      </h2>
+
+      <div class="grid md:grid-cols-3 gap-8 max-w-7xl mx-auto px-6">
+        <!-- CARD 1 -->
+
+        <div
+          class="bg-gray-800 rounded-xl overflow-hidden shadow-lg hover:scale-105 transition"
+        >
+          <img src="Mark 85 Figure.jpg" class="w-full h-64 object-cover" />
+
+          <div class="p-5">
+            <h3 class="text-2xl font-bold">Mark 85 Figure</h3>
+
+            <p class="text-gray-400 mt-2">Premium collectible.</p>
+
+            <div class="flex justify-between items-center mt-5">
+              <span class="text-yellow-400 text-xl"> ₹4,999 </span>
+
+              <button class="bg-red-600 px-4 py-2 rounded">Buy</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- CARD 2 -->
+
+        <div
+          class="bg-gray-800 rounded-xl overflow-hidden shadow-lg hover:scale-105 transition"
+        >
+          <img src="Iron Helmet.jpg" class="w-full h-64 object-cover" />
+
+          <div class="p-5">
+            <h3 class="text-2xl font-bold">Iron Helmet</h3>
+
+            <p class="text-gray-400 mt-2">LED collectible helmet.</p>
+
+            <div class="flex justify-between items-center mt-5">
+              <span class="text-yellow-400 text-xl"> ₹7,999 </span>
+
+              <button class="bg-red-600 px-4 py-2 rounded">Buy</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- CARD 3 -->
+
+        <div
+          class="bg-gray-800 rounded-xl overflow-hidden shadow-lg hover:scale-105 transition"
+        >
+          <img src="Arc Reactor.jpg" class="w-full h-64 object-cover" />
+
+          <div class="p-5">
+            <h3 class="text-2xl font-bold">Arc Reactor</h3>
+
+            <p class="text-gray-400 mt-2">Glowing arc reactor.</p>
+
+            <div class="flex justify-between items-center mt-5">
+              <span class="text-yellow-400 text-xl"> ₹2,999 </span>
+
+              <button class="bg-red-600 px-4 py-2 rounded">Buy</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+
+    <footer class="bg-black py-8 text-center">
+      <h2 class="text-3xl text-red-600 font-bold">IRONMAN TOYS</h2>
+
+      <p class="text-gray-500 mt-3">Powered by Stark Industries</p>
+    </footer>
+    <script>
+      let progress = document.getElementById("progress");
+      let loader = document.getElementById("loader");
+
+      let width = 0;
+
+      let interval = setInterval(() => {
+        width += 2;
+
+        progress.style.width = width + "%";
+
+        if (width >= 100) {
+          clearInterval(interval);
+
+          loader.style.opacity = "0";
+
+          setTimeout(() => {
+            loader.style.display = "none";
+          }, 500);
+        }
+      }, 50);
+    </script>
+  </body>
+</html>
