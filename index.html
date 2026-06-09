@@ -365,64 +365,109 @@
         Featured Products
       </h2>
 
-      <div class="grid md:grid-cols-3 gap-8 max-w-7xl mx-auto px-6">
-        <!-- CARD 1 -->
+      <div class="max-w-7xl mx-auto px-6">
+        <div id="productGrid" class="grid md:grid-cols-3 gap-8"></div>
+        <div id="noResults" class="hidden text-center text-gray-400 mt-10">
+          No products match your search.
+        </div>
+      </div>
 
-        <div
-          class="bg-gray-800 rounded-xl overflow-hidden shadow-lg hover:scale-105 transition"
-        >
-          <img src="Mark 85 Figure.jpg" class="w-full h-64 object-cover" />
+    </section>
 
-          <div class="p-5">
-            <h3 class="text-2xl font-bold">Mark 85 Figure</h3>
+    <!-- ABOUT / FUTURE VALUE -->
 
-            <p class="text-gray-400 mt-2">Premium collectible.</p>
+    <section id="about" class="py-20 px-6 bg-gray-900/40">
+      <div class="max-w-7xl mx-auto">
+        <h2 class="text-4xl font-bold text-center text-yellow-400 mb-10">About Stark</h2>
 
-            <div class="flex justify-between items-center mt-5">
-              <span class="text-yellow-400 text-xl"> ₹4,999 </span>
-
-              <button class="bg-red-600 px-4 py-2 rounded">Buy</button>
-            </div>
+        <div class="grid md:grid-cols-3 gap-8">
+          <div class="bg-gray-800 rounded-xl border border-red-600/40 p-8">
+            <div class="text-red-600 text-4xl">🧪</div>
+            <h3 class="text-2xl font-bold mt-4">Authentic Materials</h3>
+            <p class="text-gray-400 mt-3">
+              Every collectible is made for detail—built to look great under display lighting.
+            </p>
+          </div>
+          <div class="bg-gray-800 rounded-xl border border-yellow-400/30 p-8">
+            <div class="text-yellow-400 text-4xl">🚚</div>
+            <h3 class="text-2xl font-bold mt-4">Secure Shipping</h3>
+            <p class="text-gray-400 mt-3">
+              Carefully packed to keep paint, stands, and LEDs safe during transit.
+            </p>
+          </div>
+          <div class="bg-gray-800 rounded-xl border border-red-600/40 p-8">
+            <div class="text-red-600 text-4xl">🛡️</div>
+            <h3 class="text-2xl font-bold mt-4">Collector Support</h3>
+            <p class="text-gray-400 mt-3">
+              Need help with authenticity, care, or setup? Our team supports collectors.
+            </p>
           </div>
         </div>
+      </div>
+    </section>
 
-        <!-- CARD 2 -->
+    <!-- TESTIMONIALS -->
 
-        <div
-          class="bg-gray-800 rounded-xl overflow-hidden shadow-lg hover:scale-105 transition"
-        >
-          <img src="Iron Helmet.jpg" class="w-full h-64 object-cover" />
+    <section id="testimonials" class="py-20 px-6">
+      <h2 class="text-4xl font-bold text-center text-yellow-400 mb-10">Collector Reviews</h2>
 
-          <div class="p-5">
-            <h3 class="text-2xl font-bold">Iron Helmet</h3>
-
-            <p class="text-gray-400 mt-2">LED collectible helmet.</p>
-
-            <div class="flex justify-between items-center mt-5">
-              <span class="text-yellow-400 text-xl"> ₹7,999 </span>
-
-              <button class="bg-red-600 px-4 py-2 rounded">Buy</button>
-            </div>
-          </div>
+      <div class="max-w-7xl mx-auto grid md:grid-cols-3 gap-8">
+        <div class="bg-gray-800 rounded-xl p-8 border border-gray-700">
+          <p class="text-gray-300">“The Arc Reactor glow is unreal. Packaging was top-notch!”</p>
+          <div class="mt-5 font-bold">— Anya S.</div>
+          <div class="text-yellow-400">★★★★★</div>
         </div>
+        <div class="bg-gray-800 rounded-xl p-8 border border-gray-700">
+          <p class="text-gray-300">“Mark 85 looks premium and feels solid. Highly recommended.”</p>
+          <div class="mt-5 font-bold">— Vikram R.</div>
+          <div class="text-yellow-400">★★★★★</div>
+        </div>
+        <div class="bg-gray-800 rounded-xl p-8 border border-gray-700">
+          <p class="text-gray-300">“Helmet stand is perfect for my desk display. Great finish.”</p>
+          <div class="mt-5 font-bold">— Priya K.</div>
+          <div class="text-yellow-400">★★★★★</div>
+        </div>
+      </div>
+    </section>
 
-        <!-- CARD 3 -->
+    <!-- FAQ -->
 
-        <div
-          class="bg-gray-800 rounded-xl overflow-hidden shadow-lg hover:scale-105 transition"
-        >
-          <img src="Arc Reactor.jpg" class="w-full h-64 object-cover" />
+    <section id="faq" class="py-20 px-6 bg-gray-900/40">
+      <div class="max-w-7xl mx-auto">
+        <h2 class="text-4xl font-bold text-center text-yellow-400 mb-10">FAQ</h2>
 
-          <div class="p-5">
-            <h3 class="text-2xl font-bold">Arc Reactor</h3>
-
-            <p class="text-gray-400 mt-2">Glowing arc reactor.</p>
-
-            <div class="flex justify-between items-center mt-5">
-              <span class="text-yellow-400 text-xl"> ₹2,999 </span>
-
-              <button class="bg-red-600 px-4 py-2 rounded">Buy</button>
-            </div>
+        <div class="grid md:grid-cols-2 gap-6">
+          <div class="bg-gray-800 rounded-xl border border-gray-700 p-6">
+            <details class="group">
+              <summary class="cursor-pointer font-bold text-xl">Do you provide authenticity?</summary>
+              <p class="text-gray-400 mt-3 leading-relaxed">
+                Yes. Each item is sourced to match collector standards and is packed with care instructions.
+              </p>
+            </details>
+          </div>
+          <div class="bg-gray-800 rounded-xl border border-gray-700 p-6">
+            <details class="group">
+              <summary class="cursor-pointer font-bold text-xl">How do I set up LED items?</summary>
+              <p class="text-gray-400 mt-3 leading-relaxed">
+                Use the included power guidance. For best display results, keep humidity low and clean gently.
+              </p>
+            </details>
+          </div>
+          <div class="bg-gray-800 rounded-xl border border-gray-700 p-6">
+            <details class="group">
+              <summary class="cursor-pointer font-bold text-xl">Can I return damaged items?</summary>
+              <p class="text-gray-400 mt-3 leading-relaxed">
+                If your item arrives damaged, contact us quickly with photos. We’ll guide you through next steps.
+              </p>
+            </details>
+          </div>
+          <div class="bg-gray-800 rounded-xl border border-gray-700 p-6">
+            <details class="group">
+              <summary class="cursor-pointer font-bold text-xl">Will you add more products later?</summary>
+              <p class="text-gray-400 mt-3 leading-relaxed">
+                Absolutely—this page is built to be future-ready. New collections can be added via the product array.
+              </p>
+            </details>
           </div>
         </div>
       </div>
@@ -430,12 +475,38 @@
 
     <!-- FOOTER -->
 
-    <footer id="contact" class="bg-black py-8 text-center">
+    <footer id="contact" class="bg-black py-14 text-center">
+      <div class="max-w-7xl mx-auto px-6">
+        <h2 class="text-3xl text-red-600 font-bold">IRONMAN TOYS</h2>
+        <p class="text-gray-500 mt-3">Powered by Stark Industries</p>
 
-      <h2 class="text-3xl text-red-600 font-bold">IRONMAN TOYS</h2>
+        <div class="mt-8 grid md:grid-cols-3 gap-6 text-left">
+          <div class="bg-gray-900/40 border border-gray-800 rounded-xl p-6">
+            <div class="text-yellow-400 font-bold">Store Hours</div>
+            <div class="text-gray-300 mt-2">Mon–Sat: 10:00 AM – 8:00 PM</div>
+            <div class="text-gray-500 mt-1">Sun: Closed</div>
+          </div>
+          <div class="bg-gray-900/40 border border-gray-800 rounded-xl p-6">
+            <div class="text-yellow-400 font-bold">Email</div>
+            <div class="text-gray-300 mt-2">support@stark-toys.example</div>
+            <div class="text-gray-500 mt-1">Response within 24 hours</div>
+          </div>
+          <div class="bg-gray-900/40 border border-gray-800 rounded-xl p-6">
+            <div class="text-yellow-400 font-bold">Social</div>
+            <div class="flex gap-3 mt-3 justify-start">
+              <a href="#" class="text-gray-300 hover:text-yellow-400 transition">Twitter</a>
+              <a href="#" class="text-gray-300 hover:text-yellow-400 transition">Instagram</a>
+              <a href="#" class="text-gray-300 hover:text-yellow-400 transition">YouTube</a>
+            </div>
+          </div>
+        </div>
 
-      <p class="text-gray-500 mt-3">Powered by Stark Industries</p>
+        <div class="mt-10 text-sm text-gray-600">
+          © <span id="year"></span> Stark Industries. All rights reserved.
+        </div>
+      </div>
     </footer>
+
     <script>
       let progress = document.getElementById("progress");
       let loader = document.getElementById("loader");
@@ -458,6 +529,136 @@
         }
       }, 50);
 
+      // ============ Future-ready data model ============
+      const products = [
+        {
+          id: "mark85",
+          name: "Mark 85 Figure",
+          category: "Action Figures",
+          price: 4999,
+          description: "Premium collectible.",
+          image: "Mark 85 Figure.jpg",
+        },
+        {
+          id: "helmet",
+          name: "Iron Helmet",
+          category: "Helmets",
+          price: 7999,
+          description: "LED collectible helmet.",
+          image: "Iron Helmet.jpg",
+        },
+        {
+          id: "reactor",
+          name: "Arc Reactor",
+          category: "Arc Reactors",
+          price: 2999,
+          description: "Glowing arc reactor.",
+          image: "Arc Reactor.jpg",
+        },
+        {
+          id: "mini-figures",
+          name: "Assorted Mini Figures",
+          category: "Action Figures",
+          price: 1499,
+          description: "A set of 3 pocket-size collectibles.",
+          image: "Mark 85 Figure.jpg",
+        },
+        {
+          id: "helmet-stand",
+          name: "Helmet Display Stand",
+          category: "Helmets",
+          price: 999,
+          description: "Desktop stand with premium finish.",
+          image: "Iron Helmet.jpg",
+        },
+        {
+          id: "reactor-lite",
+          name: "Arc Reactor (Lite)",
+          category: "Arc Reactors",
+          price: 1999,
+          description: "Compact glow for your workspace.",
+          image: "Arc Reactor.jpg",
+        },
+      ];
+
+      const formatINR = (n) => `₹${Number(n).toLocaleString("en-IN")}`;
+
+      // Cart state (future: store items in localStorage)
+      const cart = { items: [] }; // {id, qty}
+
+      const cartBadge = document.getElementById("cartBadge");
+      const productGrid = document.getElementById("productGrid");
+      const noResults = document.getElementById("noResults");
+      const searchResultsCount = { visible: 0 };
+
+      function getCartCount() {
+        return cart.items.reduce((sum, it) => sum + it.qty, 0);
+      }
+
+      function syncCartBadge() {
+        if (!cartBadge) return;
+        cartBadge.textContent = String(getCartCount());
+      }
+
+      function addToCart(productId) {
+        const existing = cart.items.find((x) => x.id === productId);
+        if (existing) existing.qty += 1;
+        else cart.items.push({ id: productId, qty: 1 });
+        syncCartBadge();
+      }
+
+      function productCard(p) {
+        return `
+          <div class="bg-gray-800 rounded-xl overflow-hidden shadow-lg hover:scale-105 transition">
+            <img src="${p.image}" loading="lazy" alt="${p.name}" class="w-full h-64 object-cover" />
+            <div class="p-5">
+              <div class="flex items-center gap-2 text-yellow-400 text-sm font-semibold">
+                <span class="inline-block w-2 h-2 rounded-full bg-yellow-400"></span>
+                ${p.category}
+              </div>
+              <h3 class="text-2xl font-bold mt-1">${p.name}</h3>
+              <p class="text-gray-400 mt-2">${p.description}</p>
+              <div class="flex justify-between items-center mt-5">
+                <span class="text-yellow-400 text-xl font-bold">${formatINR(p.price)}</span>
+                <button data-buy="${p.id}" class="bg-red-600 px-4 py-2 rounded hover:brightness-110 transition">
+                  Buy
+                </button>
+              </div>
+            </div>
+          </div>
+        `;
+      }
+
+      function renderProducts(list) {
+        if (!productGrid) return;
+
+        productGrid.innerHTML = list.map(productCard).join("");
+        noResults && (noResults.classList.toggle("hidden", list.length !== 0));
+
+        // Wire buy buttons after rendering
+        productGrid.querySelectorAll("button[data-buy]").forEach((btn) => {
+          btn.addEventListener("click", () => addToCart(btn.getAttribute("data-buy")));
+        });
+      }
+
+      function normalize(s) {
+        return String(s || "").toLowerCase().trim();
+      }
+
+      function filterProducts(query) {
+        const q = normalize(query);
+        if (!q) return products;
+
+        return products.filter((p) => {
+          const hay = `${p.name} ${p.description} ${p.category}`.toLowerCase();
+          return hay.includes(q);
+        });
+      }
+
+      // Initial render
+      renderProducts(products);
+      syncCartBadge();
+
       // Advanced Navbar interactions
       const navLinks = document.querySelectorAll(".nav-link[data-nav]");
       const mobileLinks = document.querySelectorAll(".mobile-link[data-nav]");
@@ -470,6 +671,7 @@
 
       const mobileMenuBtn = document.getElementById("mobileMenuBtn");
       const mobileMenu = document.getElementById("mobileMenu");
+
 
       function openSearch(from) {
         if (!searchPanel || !searchInput) return;
@@ -542,12 +744,37 @@
         });
       });
 
+      // Search -> filter products (connected to products array)
+      function renderForSearch() {
+        const filtered = filterProducts(searchInput?.value);
+        renderProducts(filtered);
+      }
+
+      if (searchInput) {
+        searchInput.addEventListener("input", () => {
+          renderForSearch();
+        });
+
+        // enter key hint: keep panel open
+        searchInput.addEventListener("keydown", (e) => {
+          if (e.key === "Escape") closeSearch(searchBtn);
+        });
+      }
+
+      // Footer year
+      const year = document.getElementById("year");
+      if (year) year.textContent = String(new Date().getFullYear());
+
       // Active section highlighting
       const sections = [
         { id: "home", nav: "home" },
         { id: "shop", nav: "shop" },
         { id: "collections", nav: "collections" },
         { id: "contact", nav: "contact" },
+        // Additional sections exist, but navbar keys remain the same
+        { id: "about", nav: "collections" },
+        { id: "testimonials", nav: "collections" },
+        { id: "faq", nav: "collections" },
       ]
         .map((s) => ({
           ...s,
@@ -566,6 +793,7 @@
           l.dataset.active = active ? "true" : "false";
         });
       }
+
 
       const observer = new IntersectionObserver(
         (entries) => {
