@@ -10,93 +10,279 @@
   </head>
 
   <body class="bg-gray-950 text-white">
-   <body>
+    <!-- Loader -->
+    <div
+      id="loader"
+      class="fixed inset-0 bg-black flex flex-col justify-center items-center z-50"
+    >
+      <!-- Arc Reactor -->
 
-<!-- LOADER -->
-<div id="loader">
+      <div class="relative w-40 h-40 flex items-center justify-center">
+        <div
+          class="w-16 h-16 rounded-full bg-cyan-300 animate-pulse shadow-[0_0_30px_#67e8f9,0_0_60px_#67e8f9,0_0_100px_#67e8f9]"
+        ></div>
 
-    <!-- Arc Reactor -->
-    ...
+        <div
+          class="absolute w-28 h-28 border-4 border-cyan-300 rounded-full animate-spin"
+        ></div>
 
-    <!-- Helmet Animation -->
-    <div class="helmet-container">
+        <div
+          class="absolute w-36 h-36 border-2 border-cyan-300 rounded-full animate-spin"
+        ></div>
+      </div>
 
-        <div class="helmet">
+      <!-- Text -->
 
-            <div class="helmet-left"></div>
+      <h1 class="mt-8 text-yellow-400 text-3xl font-bold tracking-widest">
+        STARK INDUSTRIES
+      </h1>
 
-            <div class="helmet-right"></div>
+      <p class="text-gray-400 mt-2">Initializing J.A.R.V.I.S...</p>
 
-            <div class="face">
-                <div class="eyes">
-                    <span></span>
-                    <span></span>
-                </div>
-            </div>
+      <!-- Progress Bar -->
 
-        </div>
-
+      <div class="w-64 h-2 bg-gray-700 rounded-full mt-8 overflow-hidden">
+        <div id="progress" class="h-full bg-cyan-300 w-0"></div>
+      </div>
     </div>
-
-</div>
-
-<!-- WEBSITE -->
-
-<div id="website-content">
-
-    <!-- Navbar -->
-    <nav>
-        ...
-    </nav>
-
-    <!-- Hero Section with Video -->
-    <section>
-        ...
-    </section>
-
-    <!-- Products -->
-    <section>
-        ...
-    </section>
-
-</div>
     <!-- NAVBAR -->
 
-    <nav class="bg-red-700 shadow-lg">
+    <nav
+      id="site-nav"
+      class="sticky top-0 z-50 bg-red-700/40 backdrop-blur-md border-b border-red-500/30"
+    >
       <div class="max-w-7xl mx-auto px-6">
-        <div class="flex justify-between items-center py-4">
-          <h1 class="text-3xl font-bold text-yellow-400">⚡ IRONMAN TOYS</h1>
-
-          <ul class="hidden md:flex gap-8">
-            <li>
-              <a href="#" class="hover:text-yellow-400"> Home </a>
-            </li>
-
-            <li>
-              <a href="#" class="hover:text-yellow-400"> Shop </a>
-            </li>
-
-            <li>
-              <a href="#" class="hover:text-yellow-400"> Collections </a>
-            </li>
-
-            <li>
-              <a href="#" class="hover:text-yellow-400"> Contact </a>
-            </li>
-          </ul>
-
-          <button
-            class="bg-yellow-400 text-black px-5 py-2 rounded-lg font-bold hover:scale-105 transition"
+        <div class="flex justify-between items-center py-4 gap-4">
+          <a
+            href="#home"
+            class="group inline-flex items-center gap-3"
+            aria-label="IronMan Toys Store Home"
           >
-            🛒 Cart
-          </button>
+            <span
+              class="text-3xl font-bold text-yellow-400 drop-shadow-[0_0_12px_rgba(251,191,36,0.4)]"
+            >
+              ⚡
+            </span>
+            <span class="text-xl sm:text-2xl font-extrabold text-yellow-400">
+              IRONMAN TOYS
+            </span>
+          </a>
+
+          <!-- Desktop links + actions -->
+          <div class="hidden md:flex items-center gap-6">
+            <ul class="flex gap-8">
+              <li>
+                <a
+                  href="#home"
+                  class="nav-link relative text-gray-100 hover:text-yellow-400 transition-colors"
+                  data-nav="home"
+                >
+                  Home
+                  <span
+                    class="nav-underline absolute left-0 -bottom-1 h-0.5 w-0 bg-yellow-400 transition-all duration-300"
+                  ></span>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#shop"
+                  class="nav-link relative text-gray-100 hover:text-yellow-400 transition-colors"
+                  data-nav="shop"
+                >
+                  Shop
+                  <span
+                    class="nav-underline absolute left-0 -bottom-1 h-0.5 w-0 bg-yellow-400 transition-all duration-300"
+                  ></span>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#collections"
+                  class="nav-link relative text-gray-100 hover:text-yellow-400 transition-colors"
+                  data-nav="collections"
+                >
+                  Collections
+                  <span
+                    class="nav-underline absolute left-0 -bottom-1 h-0.5 w-0 bg-yellow-400 transition-all duration-300"
+                  ></span>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#contact"
+                  class="nav-link relative text-gray-100 hover:text-yellow-400 transition-colors"
+                  data-nav="contact"
+                >
+                  Contact
+                  <span
+                    class="nav-underline absolute left-0 -bottom-1 h-0.5 w-0 bg-yellow-400 transition-all duration-300"
+                  ></span>
+                </a>
+              </li>
+            </ul>
+
+            <div class="flex items-center gap-3">
+              <!-- Search (desktop) -->
+              <button
+                id="searchBtn"
+                class="inline-flex items-center justify-center w-10 h-10 rounded-xl bg-gray-900/40 hover:bg-gray-900/70 border border-gray-700/60 transition"
+                aria-label="Open search"
+                aria-expanded="false"
+              >
+                <span class="text-yellow-400">🔎</span>
+              </button>
+
+              <!-- Cart -->
+              <a
+                href="#"
+                class="relative inline-flex items-center justify-center px-5 py-2 rounded-xl bg-yellow-400 text-black font-bold hover:scale-[1.02] transition"
+                aria-label="Cart"
+              >
+                🛒 Cart
+                <span
+                  id="cartBadge"
+                  class="absolute -top-2 -right-2 min-w-7 h-7 px-2 rounded-full bg-red-600 text-white text-xs flex items-center justify-center border-2 border-red-700"
+                >
+                  0
+                </span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Mobile actions -->
+          <div class="md:hidden flex items-center gap-3">
+            <button
+              id="mobileSearchBtn"
+              class="inline-flex items-center justify-center w-10 h-10 rounded-xl bg-gray-900/40 hover:bg-gray-900/70 border border-gray-700/60 transition"
+              aria-label="Open search"
+              aria-expanded="false"
+            >
+              <span class="text-yellow-400">🔎</span>
+            </button>
+
+            <button
+              id="mobileMenuBtn"
+              class="inline-flex items-center justify-center w-10 h-10 rounded-xl bg-gray-900/40 hover:bg-gray-900/70 border border-gray-700/60 transition"
+              aria-label="Open menu"
+              aria-expanded="false"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-6 w-6 text-yellow-400"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M4 6h16M4 12h16M4 18h16"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- Search panel (desktop+mobile) -->
+        <div
+          id="searchPanel"
+          class="hidden pb-4"
+        >
+          <div class="flex items-center gap-3">
+            <input
+              id="searchInput"
+              type="search"
+              placeholder="Search products, helmets, reactors..."
+              class="w-full bg-gray-900/60 border border-gray-700/60 rounded-xl px-4 py-3 outline-none placeholder:text-gray-500 focus:border-yellow-400/60 focus:ring-2 focus:ring-yellow-400/20"
+            />
+            <button
+              id="searchCloseBtn"
+              class="px-4 py-3 rounded-xl bg-gray-900/60 border border-gray-700/60 hover:bg-gray-900/80 transition"
+              aria-label="Close search"
+            >
+              ✕
+            </button>
+          </div>
+        </div>
+
+        <!-- Mobile menu -->
+        <div
+          id="mobileMenu"
+          class="md:hidden hidden pb-4"
+        >
+          <div
+            class="rounded-2xl bg-gray-950/60 border border-gray-800/60 p-4 shadow-[0_0_30px_rgba(0,0,0,0.5)]"
+          >
+            <div class="flex flex-col gap-2">
+              <a
+                href="#home"
+                class="mobile-link px-4 py-3 rounded-xl bg-gray-900/40 hover:bg-gray-900/70 border border-gray-800/60"
+                data-nav="home"
+              >
+                Home
+              </a>
+              <a
+                href="#shop"
+                class="mobile-link px-4 py-3 rounded-xl bg-gray-900/40 hover:bg-gray-900/70 border border-gray-800/60"
+                data-nav="shop"
+              >
+                Shop
+              </a>
+              <a
+                href="#collections"
+                class="mobile-link px-4 py-3 rounded-xl bg-gray-900/40 hover:bg-gray-900/70 border border-gray-800/60"
+                data-nav="collections"
+              >
+                Collections
+              </a>
+              <a
+                href="#contact"
+                class="mobile-link px-4 py-3 rounded-xl bg-gray-900/40 hover:bg-gray-900/70 border border-gray-800/60"
+                data-nav="contact"
+              >
+                Contact
+              </a>
+
+              <a
+                href="#"
+                class="mt-2 inline-flex items-center justify-center px-4 py-3 rounded-xl bg-yellow-400 text-black font-bold hover:scale-[1.02] transition"
+              >
+                🛒 Cart
+                <span
+                  class="ml-2 text-xs bg-red-600 text-white px-2 py-1 rounded-full"
+                >
+                  0
+                </span>
+              </a>
+            </div>
+          </div>
         </div>
       </div>
+
+      <!-- tiny underline animation helper -->
+      <style>
+        .nav-link:hover .nav-underline {
+          width: 100%;
+        }
+        .nav-link[data-active="true"] {
+          color: #fbbf24;
+        }
+        .nav-link[data-active="true"] .nav-underline {
+          width: 100%;
+        }
+        .mobile-link[data-active="true"] {
+          border-color: rgba(251, 191, 36, 0.7);
+          box-shadow: 0 0 0 3px rgba(251, 191, 36, 0.15);
+        }
+      </style>
     </nav>
+
 
     <!-- HERO SECTION -->
 
-    <section class="relative h-screen overflow-hidden">
+    <section id="home" class="relative h-screen overflow-hidden">
+
       <!-- Background Video -->
       <video
         autoplay
@@ -138,7 +324,8 @@
 
     <!-- CATEGORIES -->
 
-    <section class="py-20 px-6">
+    <section id="collections" class="py-20 px-6">
+
       <h2 class="text-4xl font-bold text-center text-yellow-400 mb-10">
         Categories
       </h2>
@@ -172,7 +359,8 @@
 
     <!-- PRODUCTS -->
 
-    <section class="py-20 bg-gray-900">
+    <section id="shop" class="py-20 bg-gray-900">
+
       <h2 class="text-4xl text-center font-bold text-yellow-400 mb-12">
         Featured Products
       </h2>
@@ -242,7 +430,8 @@
 
     <!-- FOOTER -->
 
-    <footer class="bg-black py-8 text-center">
+    <footer id="contact" class="bg-black py-8 text-center">
+
       <h2 class="text-3xl text-red-600 font-bold">IRONMAN TOYS</h2>
 
       <p class="text-gray-500 mt-3">Powered by Stark Industries</p>
@@ -268,32 +457,138 @@
           }, 500);
         }
       }, 50);
+
+      // Advanced Navbar interactions
+      const navLinks = document.querySelectorAll(".nav-link[data-nav]");
+      const mobileLinks = document.querySelectorAll(".mobile-link[data-nav]");
+
+      const searchBtn = document.getElementById("searchBtn");
+      const mobileSearchBtn = document.getElementById("mobileSearchBtn");
+      const searchPanel = document.getElementById("searchPanel");
+      const searchCloseBtn = document.getElementById("searchCloseBtn");
+      const searchInput = document.getElementById("searchInput");
+
+      const mobileMenuBtn = document.getElementById("mobileMenuBtn");
+      const mobileMenu = document.getElementById("mobileMenu");
+
+      function openSearch(from) {
+        if (!searchPanel || !searchInput) return;
+        searchPanel.classList.remove("hidden");
+        if (from) from.setAttribute("aria-expanded", "true");
+        searchInput.focus();
+      }
+
+      function closeSearch(from) {
+        if (!searchPanel) return;
+        searchPanel.classList.add("hidden");
+        if (from) from.setAttribute("aria-expanded", "false");
+      }
+
+      function toggleSearch(btn) {
+        if (!searchPanel) return;
+        const isHidden = searchPanel.classList.contains("hidden");
+        if (isHidden) openSearch(btn);
+        else closeSearch(btn);
+      }
+
+      function openMobileMenu() {
+        if (!mobileMenu) return;
+        mobileMenu.classList.remove("hidden");
+        mobileMenu.classList.remove("md:hidden");
+        mobileMenuBtn?.setAttribute("aria-expanded", "true");
+      }
+
+      function closeMobileMenu() {
+        if (!mobileMenu) return;
+        mobileMenu.classList.add("hidden");
+        mobileMenuBtn?.setAttribute("aria-expanded", "false");
+      }
+
+      function toggleMobileMenu() {
+        if (!mobileMenu) return;
+        if (mobileMenu.classList.contains("hidden")) openMobileMenu();
+        else closeMobileMenu();
+      }
+
+      // Wire search buttons
+      searchBtn?.addEventListener("click", () => toggleSearch(searchBtn));
+      mobileSearchBtn?.addEventListener("click", () => toggleSearch(mobileSearchBtn));
+      searchCloseBtn?.addEventListener("click", () => closeSearch(searchBtn));
+
+      // Close search on Escape
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape") {
+          closeSearch(searchBtn);
+          closeMobileMenu();
+        }
+      });
+
+      // Wire mobile menu button
+      mobileMenuBtn?.addEventListener("click", () => toggleMobileMenu());
+
+      // Click-outside close for mobile menu + search
+      document.addEventListener("click", (e) => {
+        const isMobile = window.innerWidth < 768;
+        const clickedInsideNav = e.target && e.target.closest && e.target.closest("nav");
+        if (isMobile && mobileMenu && !clickedInsideNav) {
+          closeMobileMenu();
+        }
+      });
+
+      // Close mobile menu when a link is clicked
+      document.querySelectorAll("#mobileMenu a[data-nav]").forEach((a) => {
+        a.addEventListener("click", () => {
+          closeMobileMenu();
+        });
+      });
+
+      // Active section highlighting
+      const sections = [
+        { id: "home", nav: "home" },
+        { id: "shop", nav: "shop" },
+        { id: "collections", nav: "collections" },
+        { id: "contact", nav: "contact" },
+      ]
+        .map((s) => ({
+          ...s,
+          el: document.getElementById(s.id),
+        }))
+        .filter((s) => s.el);
+
+      function setActiveNav(navKey) {
+        navLinks.forEach((l) => {
+          const active = l.getAttribute("data-nav") === navKey;
+          l.dataset.active = active ? "true" : "false";
+        });
+
+        mobileLinks.forEach((l) => {
+          const active = l.getAttribute("data-nav") === navKey;
+          l.dataset.active = active ? "true" : "false";
+        });
+      }
+
+      const observer = new IntersectionObserver(
+        (entries) => {
+          // pick most visible
+          const visible = entries
+            .filter((en) => en.isIntersecting)
+            .sort((a, b) => (b.intersectionRatio || 0) - (a.intersectionRatio || 0))[0];
+
+          if (!visible) return;
+
+          const id = visible.target.id;
+          const match = sections.find((s) => s.id === id);
+          if (match) setActiveNav(match.nav);
+        },
+        {
+          root: null,
+          threshold: [0.2, 0.35, 0.5, 0.7],
+          rootMargin: "-25% 0px -60% 0px",
+        }
+      );
+
+      sections.forEach((s) => observer.observe(s.el));
     </script>
-    <script>
 
-const helmet =
-document.querySelector(".helmet");
-
-const loader =
-document.getElementById("loader");
-
-const website =
-document.getElementById("website-content");
-
-setTimeout(() => {
-
-    helmet.classList.add("open");
-
-},1000);
-
-setTimeout(() => {
-
-    loader.style.display = "none";
-
-    website.classList.remove("hidden");
-
-},4000);
-
-</script>
   </body>
 </html>
